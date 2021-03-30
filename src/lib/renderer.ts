@@ -228,6 +228,8 @@ export interface DefaultRendererOptions {
   qrcode: QRCode;
   content: string;
   level: 'L' | 'M' | 'Q' | 'H';
+  size: number;
+  opacity: number;
   icon: {
     enabled: boolean;
     scale: number;
