@@ -1,5 +1,7 @@
 import merge from 'lodash/merge';
 
+import { DeepPartial } from '../types/helper';
+
 import { arrToStr, encodeData, getExactValue, getIdNum } from './utils';
 import QRCode from './utils/qrcode';
 
@@ -225,7 +227,7 @@ function drawIcon<T extends DefaultRendererOptions>(props: T) {
 export interface DefaultRendererOptions {
   qrcode: QRCode;
   content: string;
-  level: string;
+  level: 'L' | 'M' | 'Q' | 'H';
   icon: {
     enabled: boolean;
     scale: number;
@@ -234,17 +236,15 @@ export interface DefaultRendererOptions {
 }
 
 export interface Renderer<T> {
-  getViewBox: (props: T) => string[];
-  listPoints: (props: T) => string[];
-  drawIcon: (props: T) => string[];
-  beforeListing: (props: T) => string[];
+  getViewBox?: (props: T & DefaultRendererOptions) => string[];
+  listPoints: (props: T & DefaultRendererOptions) => string[];
+  drawIcon?: (props: T & DefaultRendererOptions) => string[];
+  beforeListing?: (props: T & DefaultRendererOptions) => string[];
 
   defaultProps: T;
 }
 
-export function createRenderer<T extends DefaultRendererOptions>(
-  rendererProps: Renderer<T>
-) {
+export function createRenderer<T>(rendererProps: Renderer<T>) {
   const renderer: Renderer<T> = merge(
     {
       getViewBox: defaultViewBox,
@@ -259,8 +259,19 @@ export function createRenderer<T extends DefaultRendererOptions>(
     rendererProps
   );
 
-  return (props: T) => {
-    const newProps: T = Object.assign(rendererProps.defaultProps, props);
+  return (props: DeepPartial<T & DefaultRendererOptions>) => {
+    const newProps: T & DefaultRendererOptions = merge(
+      {
+        level: 'H',
+        icon: {
+          enabled: false,
+          scale: 1,
+          src: '',
+        },
+      },
+      rendererProps.defaultProps,
+      props
+    ) as T & DefaultRendererOptions;
 
     newProps.content = newProps.content || '无二维码内容';
     newProps.level = newProps.icon ? 'H' : newProps.level;
@@ -273,13 +284,13 @@ export function createRenderer<T extends DefaultRendererOptions>(
       });
 
     const template = [];
-    const viewBox = renderer.getViewBox(props);
+    const viewBox = renderer.getViewBox(newProps);
     template.push(
       `<svg width='100%' height='100%' viewBox='${viewBox}' fill='white' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>`
     );
-    template.push(arrToStr(renderer.beforeListing(props)));
-    template.push(arrToStr(renderer.listPoints(props)));
-    template.push(arrToStr(renderer.drawIcon(props)));
+    template.push(arrToStr(renderer.beforeListing(newProps)));
+    template.push(arrToStr(renderer.listPoints(newProps)));
+    template.push(arrToStr(renderer.drawIcon(newProps)));
     template.push(`</svg>`);
 
     return arrToStr(template);

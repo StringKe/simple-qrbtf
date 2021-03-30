@@ -20,8 +20,10 @@ export function getExactValue(value, defaultValue) {
 }
 
 export function arrToStr(arr: string[]): string {
-  return arr.reduce<string[]>((result, curr) => {
-    if (curr && curr.length > 0) result.push(curr);
-    return result;
-  }, []).join('\n');
+  return arr
+    .reduce<string[]>((result, curr) => {
+      if (curr && curr.length > 0) result.push(curr);
+      return result;
+    }, [])
+    .join('\n');
 }

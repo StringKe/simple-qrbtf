@@ -1,6 +1,6 @@
-import { createRenderer, DefaultRendererOptions, Renderer } from '../renderer';
+import { createRenderer, Renderer } from '../renderer';
 
-interface BaseQrOptions extends DefaultRendererOptions {
+interface BaseQrOptions {
   test: string;
 }
 
