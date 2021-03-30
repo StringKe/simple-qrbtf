@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: npm i
-      - run: npm prepare-release
+      - run: npm run prepare-release
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -45,7 +45,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm i
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
