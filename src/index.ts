@@ -7,7 +7,7 @@ import {
   ImageQr,
   LineQr,
   RandRectQr,
-  SolidQr
+  SolidQr,
 } from './lib';
 
 export const SimpleQr = {
@@ -19,7 +19,7 @@ export const SimpleQr = {
   solid: SolidQr,
   image: ImageQr,
   func: FuncQr,
-  imageFill: ImageFillQr
+  imageFill: ImageFillQr,
 };
 
 export default SimpleQr;
