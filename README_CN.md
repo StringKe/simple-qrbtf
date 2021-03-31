@@ -7,3 +7,8 @@
 
 # 安装
 `npm i simple-qrbtf`
+
+# 完整 API 文档
+[https://stringke.github.io/simple-qrbtf/](https://stringke.github.io/simple-qrbtf/)  
+
+此文档随发布版本更新，无法查看旧版本。

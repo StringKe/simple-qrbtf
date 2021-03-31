@@ -7,3 +7,8 @@ Most of the code in this project comes from [ciaochaos/qrbtf](https://github.com
 
 # install
 `npm i simple-qrbtf`
+
+# full api document
+[https://stringke.github.io/simple-qrbtf/](https://stringke.github.io/simple-qrbtf/)  
+
+this document is automatically updated, the old version cannot be viewed.
