@@ -17,6 +17,8 @@ jobs:
           node-version: 12
       - run: npm i
       - run: npm run prepare-release
+      - run: git config --global user.email "actionbot.noreplay@github.com"
+      - run: git config --global user.name "Action Bot"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
