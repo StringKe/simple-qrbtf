@@ -1,16 +1,17 @@
 import test from 'ava';
 
 import { getCombinations, saveFile } from './base.qr.spec';
-import SolidQr from './solid.qr';
+import FuncQr from './func.qr';
 
-test('Qrcode Solid', (t) => {
+test('Qrcode Func', (t) => {
   const allOptions = getCombinations(
     {
-      upColor: ['#f64c4c'],
-      leftColor: ['#ffa8a8'],
-      rightColor: ['#926060'],
-      height: [1, 2, 3, 4],
-      lpHeight: [1, 2, 3, 4],
+      funcType: ['A', 'B'],
+      type: ['rect', 'round'],
+      posType: ['rect', 'round', 'planet', 'roundRect'],
+      otherColor1: ['#000'],
+      otherColor2: ['#999'],
+      posColor: ['#777'],
       level: ['L', 'M', 'Q', 'H'],
       icon: [
         {
@@ -36,8 +37,8 @@ test('Qrcode Solid', (t) => {
   );
 
   allOptions.forEach((item, index) => {
-    const name = `${index}-${item.level}-${item.icon.enabled}`;
-    const svg = SolidQr({
+    const name = `${index}-${item.level}-${item.funcType}-${item.type}-${item.posType}-${item.icon.enabled}`;
+    const svg = FuncQr({
       content: new Date().toDateString(),
       ...item,
     });
@@ -47,7 +48,7 @@ ${JSON.stringify(item, null, 2)}
 
 ${svg}
 `;
-    saveFile(name, 'solid', content);
+    saveFile(name, 'func', content);
   });
   t.pass();
 });

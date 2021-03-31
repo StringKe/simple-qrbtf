@@ -33,7 +33,7 @@ test('Qrcode Circle', (t) => {
   );
 
   allOptions.forEach((item, index) => {
-    const name = `${index}-${item.level}-${item.height}-${item.lpHeight}-${item.icon.enabled}`;
+    const name = `${index}-${item.level}-${item.icon.enabled}`;
     const svg = CircleQr({
       content: new Date().toDateString(),
       ...item,

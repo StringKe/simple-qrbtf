@@ -28,14 +28,14 @@ const matrixString =
   ')';
 
 export interface SolidQrOptions {
-  upColor: string;
-  leftColor: string;
-  rightColor: string;
-  height: number;
-  lpHeight: number;
+  upColor?: string;
+  leftColor?: string;
+  rightColor?: string;
+  height?: number;
+  lpHeight?: number;
 }
 
-const SolidQr: Renderer<SolidQrOptions> = {
+const SolidQrRenderer: Renderer<SolidQrOptions> = {
   defaultProps: {
     upColor: '#333',
     leftColor: '#666',
@@ -63,7 +63,7 @@ const SolidQr: Renderer<SolidQrOptions> = {
     for (let x = 0; x < nCount; x++) {
       for (let y = 0; y < nCount; y++) {
         if (qrcode.isDark(x, y) === false) {
-          // continue;
+          // do nothing;
         } else if (
           typeTable[x][y] === QRPointType.POS_OTHER ||
           typeTable[x][y] === QRPointType.POS_CENTER
@@ -310,4 +310,5 @@ function defaultDrawIcon(props: RendererOptions<SolidQrOptions>) {
   return pointList;
 }
 
-export default createRenderer(SolidQr);
+export const SolidQr = createRenderer(SolidQrRenderer);
+export default SolidQr;

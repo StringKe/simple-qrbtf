@@ -23,7 +23,7 @@ export interface BaseQrOptions {
   posColor?: string;
 }
 
-const BaseQr: Renderer<BaseQrOptions> = {
+const BaseQrRenderer: Renderer<BaseQrOptions> = {
   defaultProps: {
     type: Type.Rect,
     size: 100,
@@ -53,9 +53,9 @@ const BaseQr: Renderer<BaseQrOptions> = {
 
     for (let x = 0; x < nCount; x++) {
       for (let y = 0; y < nCount; y++) {
-        if (qrcode.isDark(x, y) === false) continue;
-
-        if (
+        if (qrcode.isDark(x, y) === false) {
+          // do nothing;
+        } else if (
           typeTable[x][y] === QRPointType.ALIGN_CENTER ||
           typeTable[x][y] === QRPointType.ALIGN_OTHER ||
           typeTable[x][y] === QRPointType.TIMING
@@ -175,4 +175,6 @@ const BaseQr: Renderer<BaseQrOptions> = {
   },
 };
 
-export default createRenderer<BaseQrOptions>(BaseQr);
+export const BaseQr = createRenderer<BaseQrOptions>(BaseQrRenderer);
+
+export default BaseQr;

@@ -1,16 +1,12 @@
 import test from 'ava';
 
 import { getCombinations, saveFile } from './base.qr.spec';
-import SolidQr from './solid.qr';
+import ImageFillQr from './image-fill.qr';
 
-test('Qrcode Solid', (t) => {
+test('Qrcode Image Fill', (t) => {
   const allOptions = getCombinations(
     {
-      upColor: ['#f64c4c'],
-      leftColor: ['#ffa8a8'],
-      rightColor: ['#926060'],
-      height: [1, 2, 3, 4],
-      lpHeight: [1, 2, 3, 4],
+      color: ['rgba(0,0,0,0)', '#000'],
       level: ['L', 'M', 'Q', 'H'],
       icon: [
         {
@@ -36,8 +32,10 @@ test('Qrcode Solid', (t) => {
   );
 
   allOptions.forEach((item, index) => {
-    const name = `${index}-${item.level}-${item.icon.enabled}`;
-    const svg = SolidQr({
+    const name = `${index}-${item.level}-${
+      item.color === '#000' ? 'Color' : 'Image'
+    }-${item.icon.enabled}`;
+    const svg = ImageFillQr({
       content: new Date().toDateString(),
       ...item,
     });
@@ -47,7 +45,7 @@ ${JSON.stringify(item, null, 2)}
 
 ${svg}
 `;
-    saveFile(name, 'solid', content);
+    saveFile(name, 'image-fill', content);
   });
   t.pass();
 });

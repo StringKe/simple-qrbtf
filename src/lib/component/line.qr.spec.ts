@@ -1,16 +1,21 @@
 import test from 'ava';
 
 import { getCombinations, saveFile } from './base.qr.spec';
-import SolidQr from './solid.qr';
+import LineQr from './line.qr';
 
-test('Qrcode Solid', (t) => {
+test('Qrcode Line', (t) => {
   const allOptions = getCombinations(
     {
-      upColor: ['#f64c4c'],
-      leftColor: ['#ffa8a8'],
-      rightColor: ['#926060'],
-      height: [1, 2, 3, 4],
-      lpHeight: [1, 2, 3, 4],
+      direction: [
+        'left-right',
+        'up-down',
+        'h-v',
+        'loop',
+        'topLeft-bottomRight',
+        'topRight-bottomLeft',
+        'cross',
+      ],
+      posType: ['rect', 'round', 'planet', 'roundRect'],
       level: ['L', 'M', 'Q', 'H'],
       icon: [
         {
@@ -36,8 +41,8 @@ test('Qrcode Solid', (t) => {
   );
 
   allOptions.forEach((item, index) => {
-    const name = `${index}-${item.level}-${item.icon.enabled}`;
-    const svg = SolidQr({
+    const name = `${index}-${item.level}-[${item.direction}]-${item.posType}-${item.icon.enabled}`;
+    const svg = LineQr({
       content: new Date().toDateString(),
       ...item,
     });
@@ -47,7 +52,7 @@ ${JSON.stringify(item, null, 2)}
 
 ${svg}
 `;
-    saveFile(name, 'solid', content);
+    saveFile(name, 'line', content);
   });
   t.pass();
 });

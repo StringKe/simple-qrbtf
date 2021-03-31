@@ -2,11 +2,11 @@ import { createRenderer, Renderer } from '../renderer';
 import { getTypeTable, QRPointType, rand } from '../utils';
 
 export interface CircleQrOption {
-  otherColor: string;
-  posColor: string;
+  otherColor?: string;
+  posColor?: string;
 }
 
-const circleQr: Renderer<CircleQrOption> = {
+const CircleQrRenderer: Renderer<CircleQrOption> = {
   defaultProps: {
     otherColor: '#000',
     posColor: '#999',
@@ -186,4 +186,5 @@ const circleQr: Renderer<CircleQrOption> = {
   },
 };
 
-export default createRenderer<CircleQrOption>(circleQr);
+export const CircleQr = createRenderer<CircleQrOption>(CircleQrRenderer);
+export default CircleQr;

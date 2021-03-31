@@ -266,7 +266,7 @@ export function createRenderer<T>(rendererProps: Renderer<T>) {
     rendererProps
   );
 
-  return (props: DeepPartial<RendererOptions<T>>) => {
+  return (props?: DeepPartial<RendererOptions<T>>) => {
     const newProps: RendererOptions<T> = merge(
       {
         level: 'H',
