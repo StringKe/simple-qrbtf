@@ -7,3 +7,5 @@ src/**.js
 coverage
 *.log
 yarn.lock
+test_output
+.DS_Store
