@@ -12,3 +12,18 @@
 [https://stringke.github.io/simple-qrbtf/](https://stringke.github.io/simple-qrbtf/)  
 
 此文档随发布版本更新，无法查看旧版本。
+
+# 使用
+es6
+```javascript  
+import SimpleQr from 'simple-qrbtf';
+
+console.log(SimpleQr.base());
+```
+
+node
+```javascript
+const SimpleQr = require('simple-qrbtf');
+
+console.log(SimpleQr.base());
+```
