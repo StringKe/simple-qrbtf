@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ifrps/simple-qrbtf/compare/v1.1.1...v1.2.0) (2021-03-31)
+
+
+### Features
+
+* 添加 圆形 二维码 ([91b5b27](https://github.com/ifrps/simple-qrbtf/commit/91b5b273ce0ac255d3baf5c81919a2eadb47264c))
+* 添加几个二维码支持 ([7203e3b](https://github.com/ifrps/simple-qrbtf/commit/7203e3bc72ab19384332fea471b60d4ec042c18e))
+* 完善单元测试，增加2.5D展示效果 ([d7bacdf](https://github.com/ifrps/simple-qrbtf/commit/d7bacdf8f4c0017e14119235d8473ce4194312f2))
+
+
+### Bug Fixes
+
+* 降低 typedoc 版本 ([bddc5e0](https://github.com/ifrps/simple-qrbtf/commit/bddc5e06dd9eb0d33a3ead8f8798bd2c44fd7bd0))
+* 移除图片处理 ([52e9052](https://github.com/ifrps/simple-qrbtf/commit/52e90527a40f0344b33d4d0603a609a94d506dd3))
+
 ### [1.1.1](https://github.com/ifrps/simple-qrbtf/compare/v1.1.0...v1.1.1) (2021-03-30)
 
 ## 1.1.0 (2021-03-30)
