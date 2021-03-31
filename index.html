@@ -64,10 +64,35 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<p align='right'>
+					<a href='./README_CN.md' target='_blank' hreflang='zh-cn'>简体中文</a>
+				</p>
 				<a href="#simple-qrbtf" id="simple-qrbtf" style="color: inherit; text-decoration: none;">
 					<h1>simple-qrbtf</h1>
 				</a>
-				<p>this is simple create a qrcode library</p>
+				<p>Most of the code in this project comes from <a href="https://github.com/ciaochaos/qrbtf">ciaochaos/qrbtf</a>. Compared with <a href="https://github.com/ciaochaos/qrbtf">ciaochaos/qrbtf</a>, it removes the framework limitation and supports the use of <code>node</code> and <code>browser</code> in environments.</p>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h1>install</h1>
+				</a>
+				<p><code>npm i simple-qrbtf</code></p>
+				<a href="#full-api-document" id="full-api-document" style="color: inherit; text-decoration: none;">
+					<h1>full api document</h1>
+				</a>
+				<p><a href="https://stringke.github.io/simple-qrbtf/">https://stringke.github.io/simple-qrbtf/</a>  </p>
+				<p>this document is automatically updated, the old version cannot be viewed.</p>
+				<a href="#use" id="use" style="color: inherit; text-decoration: none;">
+					<h1>use</h1>
+				</a>
+				<p>es6</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> SimpleQr <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-qrbtf&#x27;</span>;
+
+<span class="hljs-built_in">console</span>.log(SimpleQr.base());
+</code></pre>
+				<p>node</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> SimpleQr = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;simple-qrbtf&#x27;</span>);
+
+<span class="hljs-built_in">console</span>.log(SimpleQr.base());
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -80,6 +105,12 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/functype.html" class="tsd-kind-icon">Func<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/linedirection.html" class="tsd-kind-icon">Line<wbr>Direction</a>
+					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/postype.html" class="tsd-kind-icon">Pos<wbr>Type</a>
 					</li>
@@ -105,16 +136,88 @@
 						<a href="interfaces/baseqroptions.html" class="tsd-kind-icon">Base<wbr>QrOptions</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/circleqroption.html" class="tsd-kind-icon">Circle<wbr>QrOption</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/dsjqroptions.html" class="tsd-kind-icon">DSJQr<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/defaultrendereroptions.html" class="tsd-kind-icon">Default<wbr>Renderer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/funcqroptions.html" class="tsd-kind-icon">Func<wbr>QrOptions</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ioptions.html" class="tsd-kind-icon">IOptions</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imagefillqroptions.html" class="tsd-kind-icon">Image<wbr>Fill<wbr>QrOptions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imageqroptions.html" class="tsd-kind-icon">Image<wbr>QrOptions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineqroptions.html" class="tsd-kind-icon">Line<wbr>QrOptions</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/renderer.html" class="tsd-kind-icon">Renderer</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/solidqroptions.html" class="tsd-kind-icon">Solid<wbr>QrOptions</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#randrectoptions" class="tsd-kind-icon">Rand<wbr>Rect<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#rendereroptions" class="tsd-kind-icon">Renderer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#baseqr" class="tsd-kind-icon">Base<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#circleqr" class="tsd-kind-icon">Circle<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#dsjqr" class="tsd-kind-icon">DsjQR</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#funcqr" class="tsd-kind-icon">Func<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#imagefillqr" class="tsd-kind-icon">Image<wbr>Fill<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#imageqr" class="tsd-kind-icon">Image<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#lineqr" class="tsd-kind-icon">Line<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#randrectqr" class="tsd-kind-icon">Rand<wbr>Rect<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#solidqr" class="tsd-kind-icon">Solid<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#x" class="tsd-kind-icon">X</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#y" class="tsd-kind-icon">Y</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#z" class="tsd-kind-icon">Z</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#defaultimage" class="tsd-kind-icon">default<wbr>Image</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#defaultresimage" class="tsd-kind-icon">default<wbr>Res<wbr>Image</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#idnum" class="tsd-kind-icon">id<wbr>Num</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#matrixstring" class="tsd-kind-icon">matrix<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#seed" class="tsd-kind-icon">seed</a>
@@ -141,6 +244,9 @@
 						<a href="globals.html#encodedata" class="tsd-kind-icon">encode<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#getdefaulticon" class="tsd-kind-icon">get<wbr>Default<wbr>Icon</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#getexactvalue" class="tsd-kind-icon">get<wbr>Exact<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -156,7 +262,25 @@
 						<a href="globals.html#rand" class="tsd-kind-icon">rand</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#baseqr" class="tsd-kind-icon">Base<wbr>Qr</a>
+						<a href="globals.html#baseqrrenderer" class="tsd-kind-icon">Base<wbr>QrRenderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#circleqrrenderer" class="tsd-kind-icon">Circle<wbr>QrRenderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#dsjqrrenderer" class="tsd-kind-icon">Dsj<wbr>QrRenderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#funcqrrenderer" class="tsd-kind-icon">Func<wbr>QrRenderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#imagefillrenderer" class="tsd-kind-icon">Image<wbr>Fill<wbr>Renderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#imageqrrenderer" class="tsd-kind-icon">Image<wbr>QrRenderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#lineqrrenderer" class="tsd-kind-icon">Line<wbr>QrRenderer</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#qrerrorcorrectlevel" class="tsd-kind-icon">QRError<wbr>Correct<wbr>Level</a>
@@ -175,6 +299,15 @@
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#qrutil" class="tsd-kind-icon">QRUtil</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#randrectrenderer" class="tsd-kind-icon">Rand<wbr>Rect<wbr>Renderer</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#simpleqr" class="tsd-kind-icon">Simple<wbr>Qr</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#solidqrrenderer" class="tsd-kind-icon">Solid<wbr>QrRenderer</a>
 					</li>
 				</ul>
 			</nav>

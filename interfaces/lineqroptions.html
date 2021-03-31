@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseQrOptions | simple-qrbtf</title>
+	<title>LineQrOptions | simple-qrbtf</title>
 	<meta name="description" content="Documentation for simple-qrbtf">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="baseqroptions.html">BaseQrOptions</a>
+					<a href="lineqroptions.html">LineQrOptions</a>
 				</li>
 			</ul>
-			<h1>Interface BaseQrOptions</h1>
+			<h1>Interface LineQrOptions</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BaseQrOptions</span>
+						<span class="target">LineQrOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -81,12 +81,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#opacity" class="tsd-kind-icon">opacity</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#othercolor" class="tsd-kind-icon">other<wbr>Color</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#poscolor" class="tsd-kind-icon">pos<wbr>Color</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#postype" class="tsd-kind-icon">pos<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#size" class="tsd-kind-icon">size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseqroptions.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#direction" class="tsd-kind-icon">direction</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#linecolor" class="tsd-kind-icon">line<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#lineopacity" class="tsd-kind-icon">line<wbr>Opacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#linewidth" class="tsd-kind-icon">line<wbr>Width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#poscolor" class="tsd-kind-icon">pos<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="lineqroptions.html#postype" class="tsd-kind-icon">pos<wbr>Type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,22 +95,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="opacity" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> opacity</h3>
-					<div class="tsd-signature tsd-kind-icon">opacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="direction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> direction</h3>
+					<div class="tsd-signature tsd-kind-icon">direction<span class="tsd-signature-symbol">:</span> <a href="../enums/linedirection.html" class="tsd-signature-type">LineDirection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L21">lib/component/base.qr.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L22">lib/component/line.qr.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="othercolor" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> other<wbr>Color</h3>
-					<div class="tsd-signature tsd-kind-icon">other<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="linecolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> line<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">line<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L22">lib/component/base.qr.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L25">lib/component/line.qr.ts:25</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="lineopacity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> line<wbr>Opacity</h3>
+					<div class="tsd-signature tsd-kind-icon">line<wbr>Opacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L24">lib/component/line.qr.ts:24</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="linewidth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> line<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">line<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L23">lib/component/line.qr.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -120,37 +140,17 @@
 					<div class="tsd-signature tsd-kind-icon">pos<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L23">lib/component/base.qr.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L27">lib/component/line.qr.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="postype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pos<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">pos<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/postype.html" class="tsd-signature-type">PosType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">pos<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/postype.html" class="tsd-signature-type">PosType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L19">lib/component/base.qr.ts:19</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="size" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> size</h3>
-					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L20">lib/component/base.qr.ts:20</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="type" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/type.html" class="tsd-signature-type">Type</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/base.qr.ts#L18">lib/component/base.qr.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/StringKe/simple-qrbtf/blob/bddc5e0/src/lib/component/line.qr.ts#L26">lib/component/line.qr.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -169,25 +169,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="baseqroptions.html" class="tsd-kind-icon">Base<wbr>QrOptions</a>
+						<a href="lineqroptions.html" class="tsd-kind-icon">Line<wbr>QrOptions</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#opacity" class="tsd-kind-icon">opacity</a>
+								<a href="lineqroptions.html#direction" class="tsd-kind-icon">direction</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#othercolor" class="tsd-kind-icon">other<wbr>Color</a>
+								<a href="lineqroptions.html#linecolor" class="tsd-kind-icon">line<wbr>Color</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#poscolor" class="tsd-kind-icon">pos<wbr>Color</a>
+								<a href="lineqroptions.html#lineopacity" class="tsd-kind-icon">line<wbr>Opacity</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#postype" class="tsd-kind-icon">pos<wbr>Type</a>
+								<a href="lineqroptions.html#linewidth" class="tsd-kind-icon">line<wbr>Width</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#size" class="tsd-kind-icon">size</a>
+								<a href="lineqroptions.html#poscolor" class="tsd-kind-icon">pos<wbr>Color</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseqroptions.html#type" class="tsd-kind-icon">type</a>
+								<a href="lineqroptions.html#postype" class="tsd-kind-icon">pos<wbr>Type</a>
 							</li>
 						</ul>
 					</li>
