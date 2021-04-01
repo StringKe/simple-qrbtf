@@ -5,6 +5,21 @@
 # simple-qrbtf
 此项目大部分代码来自 [ciaochaos/qrbtf](https://github.com/ciaochaos/qrbtf)， 仅去除框架支持可以在 `node` 或 `browser` 中使用。
 
+# 预览
+
+| base                                                     | circle                                                     | dsj                                                     |
+| -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------- |
+| <img src="./assets/base.png" width="80px" height="80px"> | <img src="./assets/circle.png" width="80px" height="80px"> | <img src="./assets/dsj.png" width="80px" height="80px"> |
+
+| func                                                    | image                                                     | imagefill                                                     |
+| ------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| <img src="./assets/fun.png" width="80px" height="80px"> | <img src="./assets/image.png" width="80px" height="80px"> | <img src="./assets/imagefill.png" width="80px" height="80px"> |
+
+| line                                                     | rand-rect                                                    | solid(2.5D)                                               |
+| -------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
+| <img src="./assets/line.png" width="80px" height="80px"> | <img src="./assets/randrect.png" width="80px" height="80px"> | <img src="./assets/solid.png" width="80px" height="80px"> |
+
+
 # 安装
 `npm i simple-qrbtf`
 

@@ -3,25 +3,45 @@
 </p>
 
 # simple-qrbtf
+
 Most of the code in this project comes from [ciaochaos/qrbtf](https://github.com/ciaochaos/qrbtf). Compared with [ciaochaos/qrbtf](https://github.com/ciaochaos/qrbtf), it removes the framework limitation and supports the use of `node` and `browser` in environments.
 
+# preview
+
+| base                                                     | circle                                                     | dsj                                                     |
+| -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------- |
+| <img src="./assets/base.png" width="80px" height="80px"> | <img src="./assets/circle.png" width="80px" height="80px"> | <img src="./assets/dsj.png" width="80px" height="80px"> |
+
+| func                                                    | image                                                     | imagefill                                                     |
+| ------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| <img src="./assets/fun.png" width="80px" height="80px"> | <img src="./assets/image.png" width="80px" height="80px"> | <img src="./assets/imagefill.png" width="80px" height="80px"> |
+
+| line                                                     | rand-rect                                                    | solid(2.5D)                                               |
+| -------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
+| <img src="./assets/line.png" width="80px" height="80px"> | <img src="./assets/randrect.png" width="80px" height="80px"> | <img src="./assets/solid.png" width="80px" height="80px"> |
+
 # install
+
 `npm i simple-qrbtf`
 
 # full api document
-[https://stringke.github.io/simple-qrbtf/](https://stringke.github.io/simple-qrbtf/)  
+
+[https://stringke.github.io/simple-qrbtf/](https://stringke.github.io/simple-qrbtf/)
 
 this document is automatically updated, the old version cannot be viewed.
 
 # use
+
 es6
-```javascript  
+
+```javascript
 import SimpleQr from 'simple-qrbtf';
 
 console.log(SimpleQr.base());
 ```
 
 node
+
 ```javascript
 const SimpleQr = require('simple-qrbtf');
 
