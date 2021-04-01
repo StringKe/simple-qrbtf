@@ -17,26 +17,13 @@ jobs:
           node-version: 12
       - run: npm i
       - run: npm run prepare-release
-      - run: git config --global user.email "actionbot.noreplay@github.com"
+      - run: git config --global user.email "authemail@qq.com"
       - run: git config --global user.name "Action Bot"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
     needs: build
@@ -47,6 +34,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+      - run: git config --global user.email "authemail@qq.com"
+      - run: git config --global user.name "Action Bot"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
