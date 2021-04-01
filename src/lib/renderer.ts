@@ -1,7 +1,6 @@
 import merge from 'lodash/merge';
 
-import { DeepPartial } from '../types/helper';
-
+import { DeepPartial } from './helper';
 import { arrToStr, encodeData, getExactValue, getIdNum } from './utils';
 import QRCode from './utils/qrcode';
 
