@@ -24,7 +24,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "DEBUG=\"vite-plugin-dts:bundle\" vite build"
+    "build": "DEBUG=\"vite-plugin-dts:bundle\" vite build",
+    "commit" : "git-cz",
+    "release": "standard-version"
   },
   "author": {
     "name": "StringKe",
@@ -40,9 +42,16 @@
   ],
   "devDependencies": {
     "@types/node": "^20.11.27",
+    "cz-conventional-changelog": "^3.3.0",
     "prettier": "^3.2.5",
+    "standard-version": "^9.5.0",
     "typescript": "5.3.3",
     "vite": "^5.1.6",
     "vite-plugin-dts": "^3.7.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

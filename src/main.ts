@@ -1,8 +1,6 @@
-import './style.css';
 import SimpleQr from '../lib';
 
-const baseQr = SimpleQr.base({
-    type: 'rect',
+const baseQr = SimpleQr.line({
     content: 'https://github.com/stringke/simple-qrbtf',
 });
 
