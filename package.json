@@ -2,7 +2,7 @@
   "name": "simple-qrbtf",
   "description": "this is simple create a svg qrcode library",
   "private": false,
-  "version": "1.3.0",
+  "version": "1.4.0",
   "type": "module",
   "homepage": "https://github.com/stringke/simple-qrbtf/",
   "repository": {
@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "vite",
     "build": "DEBUG=\"vite-plugin-dts:bundle\" vite build",
-    "commit" : "git-cz",
+    "commit": "git-cz",
     "release": "standard-version"
   },
   "author": {
