@@ -1,57 +1,57 @@
 {
-  "name": "simple-qrbtf",
-  "description": "this is simple create a svg qrcode library",
-  "private": false,
-  "version": "1.4.1",
-  "type": "module",
-  "homepage": "https://github.com/stringke/simple-qrbtf/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stringke/simple-qrbtf.git"
-  },
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
+    "name": "simple-qrbtf",
+    "description": "this is simple create a svg qrcode library",
+    "private": false,
+    "version": "1.4.1",
+    "type": "module",
+    "homepage": "https://github.com/stringke/simple-qrbtf/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stringke/simple-qrbtf.git"
+    },
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.umd.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.umd.cjs",
-    "node": "./dist/index.cjs"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "DEBUG=\"vite-plugin-dts:bundle\" vite build",
-    "commit": "git-cz",
-    "release": "standard-version"
-  },
-  "author": {
-    "name": "StringKe",
-    "email": "stringke@126.com",
-    "url": "https://github.com/stringke"
-  },
-  "keywords": [
-    "qrcode",
-    "svg",
-    "library",
-    "qrbtf",
-    "simple"
-  ],
-  "devDependencies": {
-    "@types/node": "^20.11.27",
-    "cz-conventional-changelog": "^3.3.0",
-    "prettier": "^3.2.5",
-    "standard-version": "^9.5.0",
-    "typescript": "5.3.3",
-    "vite": "^5.1.6",
-    "vite-plugin-dts": "^3.7.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "require": "./dist/index.umd.cjs",
+        "node": "./dist/index.cjs"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "DEBUG=\"vite-plugin-dts:bundle\" vite build",
+        "commit": "git-cz",
+        "release": "standard-version"
+    },
+    "author": {
+        "name": "StringKe",
+        "email": "stringke@126.com",
+        "url": "https://github.com/stringke"
+    },
+    "keywords": [
+        "qrcode",
+        "svg",
+        "library",
+        "qrbtf",
+        "simple"
+    ],
+    "devDependencies": {
+        "@types/node": "^20.11.27",
+        "cz-conventional-changelog": "^3.3.0",
+        "prettier": "^3.2.5",
+        "standard-version": "^9.5.0",
+        "typescript": "5.3.3",
+        "vite": "^5.1.6",
+        "vite-plugin-dts": "^3.7.3"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  }
 }

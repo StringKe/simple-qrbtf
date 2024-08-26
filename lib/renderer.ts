@@ -228,6 +228,30 @@ export interface Renderer<T> {
     defaultProps: T;
 }
 
+export function defaultMergeOptions<T>(
+    renderer: Renderer<T>,
+    props?: DeepPartial<RendererOptions<T>>,
+): RendererOptions<T> {
+    const newProps = merge(
+        {
+            level: 'H',
+            icon: {
+                enabled: 0,
+                scale: 100,
+                src: '',
+            },
+            opacity: 100,
+            size: 100,
+        },
+        renderer.defaultProps,
+        props,
+    ) as RendererOptions<T>;
+
+    newProps.content = newProps.content || '无二维码内容';
+    newProps.level = newProps.icon ? 'H' : newProps.level;
+    return newProps;
+}
+
 export function createRenderer<T>(rendererProps: Renderer<T>) {
     const renderer = merge(
         {
@@ -243,24 +267,12 @@ export function createRenderer<T>(rendererProps: Renderer<T>) {
         rendererProps,
     ) as Required<Renderer<T>>;
 
-    return (props?: DeepPartial<RendererOptions<T>>) => {
-        const newProps = merge(
-            {
-                level: 'H',
-                icon: {
-                    enabled: 0,
-                    scale: 100,
-                    src: '',
-                },
-                opacity: 100,
-                size: 100,
-            },
-            rendererProps.defaultProps,
-            props,
-        ) as RendererOptions<T>;
-
-        newProps.content = newProps.content || '无二维码内容';
-        newProps.level = newProps.icon ? 'H' : newProps.level;
+    return (
+        props?: DeepPartial<RendererOptions<T>>,
+        mergeOptions?: (renderer: Renderer<T>, props?: DeepPartial<RendererOptions<T>>) => RendererOptions<T>,
+    ) => {
+        const fn = mergeOptions || defaultMergeOptions;
+        const newProps = fn(renderer, props);
         newProps.qrcode =
             newProps.qrcode ||
             encodeData({
