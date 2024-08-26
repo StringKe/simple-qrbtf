@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/stringke/simple-qrbtf/compare/v1.4.1...v1.5.0) (2024-08-26)
+
+
+### Features
+
+* allow user custom merge options ([8ceacb3](https://github.com/stringke/simple-qrbtf/commit/8ceacb34266da8681cbaf6aae23124a6e72534e7))
+
 ### [1.4.1](https://github.com/stringke/simple-qrbtf/compare/v1.4.0...v1.4.1) (2024-03-15)
 
 ## [1.4.0](https://github.com/stringke/simple-qrbtf/compare/v1.3.0...v1.4.0) (2024-03-15)
